@@ -1,5 +1,4 @@
 import org.jetbrains.compose.ExperimentalComposeLibrary
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -30,16 +29,34 @@ kotlin {
     sourceSets {
         
         androidMain.dependencies {
+            implementation(libs.compose.ui)
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.squareup.android.driver)
+            implementation(libs.koin.android)
+            implementation(libs.koin.compose)
+            implementation(compose.material)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
-            implementation(compose.ui)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
+
+            implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.squareup.runtime)
+            implementation(libs.squareup.coroutine)
+            implementation(libs.kotlinx.datetime)
+            implementation(libs.voyager.navigator)
+            implementation(libs.voyager.tab.navigator)
+            implementation(libs.voyager.transitions)
+            implementation(libs.voyager.koin)
+            implementation(libs.koin.core)
+            implementation(libs.koin.test)
+        }
+        iosMain.dependencies {
+            implementation(libs.squareup.native.driver)
         }
     }
 }
