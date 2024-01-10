@@ -80,7 +80,7 @@ object AddTab : Tab {
 
     @Composable
     override fun Content() {
-        Navigator(RemindersScreen())
+        Navigator(CreateReminderScreen())
     }
 }
 
@@ -104,7 +104,7 @@ object SettingsTab : Tab {
 
     @Composable
     override fun Content() {
-        Navigator(CreateReminderScreen())
+        Navigator(SettingsScreen())
     }
 }
 
@@ -131,7 +131,7 @@ object RemindersTab : Tab {
         Box(
             modifier = Modifier.fillMaxSize()
         ) {
-            Navigator(SettingsScreen())
+            Navigator(RemindersScreen())
         }
     }
 }

@@ -6,4 +6,5 @@ val coreModule: Module
 //        includes(platformCoreModule)
 //        includes(useCaseMudule)
 //        includes(sharedViewModelModule)
+        includes(screenModelModule)
     }
