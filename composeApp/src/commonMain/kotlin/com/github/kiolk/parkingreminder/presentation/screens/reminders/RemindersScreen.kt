@@ -17,7 +17,6 @@ class RemindersScreen : Screen {
             is RemindersScreenModel.State.Data -> Column {
 
             }
-
             RemindersScreenModel.State.Idle -> TODO()
             RemindersScreenModel.State.Loading -> TODO()
         }
